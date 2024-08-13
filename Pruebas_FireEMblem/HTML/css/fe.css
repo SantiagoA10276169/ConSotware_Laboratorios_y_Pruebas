@@ -26,12 +26,36 @@
     }
 
     .Crusader {
-        color: rgb(40, 34, 124);
+        color: rgb(84, 79, 156);
     }
 
     #lords {
         color: rgb(142, 173, 113);
     }
+
+
+
+
+    .CYL1-H1 {
+        color: rgb(189, 160, 81);
+    }
+
+    .CYL1-F1 {
+        color: red;
+    }
+
+    .CYL1-H2 {
+        color: rgb(22, 207, 83);
+    }
+
+    .CYL1-F2 {
+        color: rgb(84, 79, 156);
+    }
+
+    #lords {
+        color: rgb(142, 173, 113);
+    }
+
 
     body.FEH {
         box-sizing: content-box;

@@ -1,0 +1,22 @@
+document.getElementById("miFormulario").addEventListener("submit", function(event) {
+  var password = document.getElementById("password").value;
+  var confirm_password = document.getElementById("confirm_password").value;
+  var errores = 0; // Definir variable para errores
+  var mensajeErrores = document.getElementById("mensajeErrores");
+
+
+
+  if (password !== confirm_password) {
+    alert("Las contraseñas deben coincidir");
+    errores++;
+    event.preventDefault();
+  }
+
+ 
+  if (errores > 0) {
+    mensajeErrores.textContent = "Número total de errores: " + errores;
+    event.preventDefault();
+  } else {
+    alert("Todo está correcto");
+  }
+});

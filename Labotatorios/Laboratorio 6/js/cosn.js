@@ -16,4 +16,10 @@ const valida_passwords = () => {
 }
 
 password.onkeyup = valida_passwords;
-confirm_password.onkeyup = valida_passwords;
+confirm_password.onkeyup = valida_passwords; 
+
+const buttonError = document.getElementById("bottom_Error");
+
+buttonError.addEventListener("click", () => {
+  alert("La contraseña es incorrecta");
+});

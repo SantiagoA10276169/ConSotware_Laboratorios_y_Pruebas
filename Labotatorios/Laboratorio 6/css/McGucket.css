@@ -1,0 +1,19 @@
+body {
+    background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg1.wikia.nocookie.net%2F__cb20140909190910%2Fgravityfalls%2Fimages%2F5%2F5a%2FS2e4_laptop_open.png&f=1&nofb=1&ipt=2a18c60df999d0448ea470074b274052175741a0c5997316833684dd206ffd6d&ipo=images") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: flex-start; 
+}
+
+.box {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 185px; 
+}

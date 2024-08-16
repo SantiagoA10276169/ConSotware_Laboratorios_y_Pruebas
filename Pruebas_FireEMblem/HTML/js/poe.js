@@ -4,7 +4,7 @@ const boton = document.getElementById('bottom_Summon');
 
 const summons = [
     {
-        description: "you got Celica", 
+        description: "you got a 5 stars Celica", 
         imagen:"https://pm1.narvii.com/6551/f0a8ccb8bc04bd57eb1ec8a118df34cb7d116743_hq.jpg",
     },
     {

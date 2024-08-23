@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="has-text-centered">
+    <head>
+        <title>FIRE EMBLEM CYL!</title> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <link rel="stylesheet" type="text/css" href="css/fe.css">
+        <style>
+            .image-container {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://fire-emblem-heroes.com">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Fire_Emblem_Heroes_logo.png" alt="Fire Emblem Heroes">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Home
+                </a>
+          
+                <a class="navbar-item">
+                  Breve Heroes
+                </a>
+          
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    Past Banners
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" onclick="changeImage('green')">
+                      Green
+                    </a>
+                    <a class="navbar-item" onclick="changeImage('red')">
+                      Red
+                    </a>
+                    <a class="navbar-item" onclick="changeImage('blue')">
+                      Blue
+                    </a>
+                    <a class="navbar-item" onclick="changeImage('grey')">
+                      Grey
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                      More
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a class="button is-primary">
+                      <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light">
+                      Log in
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        <div class="image-container">
+            <img id="banner-image" src="" alt="Selected Banner">
+        </div>
+
+        <script>
+            function changeImage(color) {
+                const image = document.getElementById('banner-image');
+                switch (color) {
+                    case 'green':
+                        image.src = 'https://example.com/green-image.jpg';
+                        break;
+                    case 'red':
+                        image.src = 'https://example.com/red-image.jpg';
+                        break;
+                    case 'blue':
+                        image.src = 'https://example.com/blue-image.jpg';
+                        break;
+                    case 'grey':
+                        image.src = 'https://example.com/grey-image.jpg';
+                        break;
+                    default:
+                        image.src = '';
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+/* Clase personalizada para el fondo de la sección */
+.Hero_Back {
+    background: url("https://static.wikia.nocookie.net/feheroes_gamepedia_en/images/9/9d/BG_DetailedStatus.png/revision/latest?cb=20171220123904") no-repeat center center;
+    background-size: cover; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 4px 4px 6px 1px rgba(0,0,0,0.4);
+}
+
+.Til {
+    font: normal 42px; 
+    color: rgb(179, 219, 35); 
+}
+
+.Ceada {
+    color: rgb(81, 81, 189);
+}
+
+.Mila {
+    color: red;
+}
+
+.Duma {
+    color: rgb(22, 207, 83);
+}
+
+.Crusader {
+    color: rgb(84, 79, 156);
+}
+
+#lords {
+    color: rgb(142, 173, 113);
+}
+
+
+
+
+.CYL1-H1 {
+    color: rgb(189, 160, 81);
+}
+
+.CYL1-F1 {
+    color: red;
+}
+
+.CYL1-H2 {
+    color: rgb(22, 207, 83);
+}
+
+.CYL1-F2 {
+    color: rgb(84, 79, 156);
+}
+
+#lords {
+    color: rgb(142, 173, 113);
+}
+
+
+body.FEH {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0; 
+    font: normal 16px/24px "Times New Roman", Times, serif;
+    color: rgb(255, 255, 255);
+    background: url("https://enjoycss.com/bg-img/custom/4129583-1nnz907.ljqj.png") no-repeat center center fixed; /* Hacer que la imagen de fondo cubra toda la pantalla */
+    background-size: cover; 
+    background-origin: border-box;
+    background-clip: border-box;
+    box-shadow: 4px 4px 6px 1px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    max-width: 100%; 
+}
+
+h1, h2, h3 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+p, ul, li, table {
+    margin: 5px 0;
+    padding: 0;
+}
+
+
+
+
+
+#lords {
+color: rgb(142, 173, 113);
+}

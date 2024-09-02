@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 //rutas/use
 
-const misRuta = require('./routes/ruta');
+const misRuta = require('./routes/ruta_js');
 app.use('/', misRuta);
 
 const misRutas = require('./routes/rutas');
@@ -40,12 +40,6 @@ app.get('/spark', (request, response, next) => {
     console.log('Otro middleware!');
     response.render('spark');
 });
-
-app.get('/breve', (request, response, next) => {
-    console.log('Otro middleware!');
-    response.render('brave');
-});
-
 
 
 //404

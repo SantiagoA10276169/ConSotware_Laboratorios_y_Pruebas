@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs') %>
+            <header>
+                <h1 class="title">Selecciona un Orbe</h1>
+            </header>
+            <main>
+                <form action="/spark" method="POST">
+                    <div class="field">
+                        <label class="label" for="nombre">Heroe</label>
+                        <div class="control">
+                            <input id="Fav" name="Fav" class="input" type="text" placeholder="Alfonse ~ Heir to Openness" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="Spark" class="label">Spark</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="Spark" name="Spark">
+                                    <option value="green">Green</option>
+                                    <option value="red">Red</option> 
+                                    <option value="blue">Blue</option> 
+                                    <option value="grey">Grey</option> 
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <input type="submit" class="button is-link" value="Mostrar Imagen">
+                    </div>
+                </form>
+            </main>
+<%- include('includes/foot.ejs') %>

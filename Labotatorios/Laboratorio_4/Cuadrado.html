@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript</title>
+</head>
+<body>
+    <!-- Caso 1 -->
+    <div>
+        <h1>Caso 1 - Tabla de Cuadrados y Cubos</h1>
+        <button onclick="generarTabla()">Generar Tabla</button>
+        <div id="resultadoTabla"></div>
+    </div>
+
+    <script>
+        function generarTabla() {
+            let num = parseInt(prompt("Introduce un número:"));
+            if (isNaN(num) || num <= 0) {
+                document.getElementById("resultadoTabla").innerHTML = "Por favor, introduce un número válido.";
+                return;
+            }
+
+            let tabla = "<table border='1'><tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>";
+            for (let i = 1; i <= num; i++) {
+                tabla += `<tr><td>${i}</td><td>${i * i}</td><td>${i * i * i}</td></tr>`;
+            }
+            tabla += "</table>";
+            document.getElementById("resultadoTabla").innerHTML = tabla;
+        }
+    </script>
+
+    <!-- Caso 2 -->
+    <div>
+        <h1>Caso 2 - Prueba de Suma de Números Aleatorios</h1>
+        <button onclick="probarSuma()">Iniciar</button>
+        <div id="resultadoSuma"></div>
+    </div>
+
+    <script>
+        function probarSuma() {
+            let num1 = Math.floor(Math.random() * 10);
+            let num2 = Math.floor(Math.random() * 10);
+            let sumaCorrecta = num1 + num2;
+
+            let inicio = new Date().getTime();
+            let respuesta = parseInt(prompt(`¿Cuánto es ${num1} + ${num2}?`));
+            let fin = new Date().getTime();
+            let tiempo = (fin - inicio) / 1000;
+
+            let mensaje = (respuesta === sumaCorrecta) 
+                ? `¡Correcto! Tiempo: ${tiempo} segundos.` 
+                : `Incorrecto. La respuesta era ${sumaCorrecta}. Tiempo: ${tiempo} segundos.`;
+
+            document.getElementById("resultadoSuma").innerHTML = mensaje;
+        }
+    </script>
+
+    <!-- Caso 3 -->
+    <div>
+        <h1>Caso 3 - Contador de Números</h1>
+        <button onclick="calcularNumeros()">Contar Números</button>
+        <div id="resultadoContador"></div>
+    </div>
+
+    <script>
+        function calcularNumeros() {
+            let input = prompt("Introduce una serie de números separados por comas:");
+            if (!input) {
+                document.getElementById("resultadoContador").innerHTML = "Por favor, introduce una cadena válida.";
+                return;
+            }
+
+            let numeros = input.split(',').map(Number);
+            let negativos = 0, ceros = 0, positivos = 0;
+
+            for (let i = 0; i < numeros.length; i++) {
+                if (isNaN(numeros[i])) {
+                    document.getElementById("resultadoContador").innerHTML = "Por favor, introduce solo números válidos.";
+                    return;
+                }
+                if (numeros[i] < 0) negativos++;
+                else if (numeros[i] === 0) ceros++;
+                else positivos++;
+            }
+
+            document.getElementById("resultadoContador").innerHTML = `
+                Negativos: ${negativos} <br>
+                Ceros: ${ceros} <br>
+                Positivos: ${positivos}
+            `;
+        }
+    </script>
+
+    <!-- Caso 4 -->
+    <div>
+        <h1>Caso 4 - Promedio de Matriz</h1>
+        <button onclick="calcularPromedios()">Calcular Promedios</button>
+        <div id="resultadoPromedios"></div>
+    </div>
+
+    <script>
+        function calcularPromedios() {
+            let input = prompt("Introduce una matriz de arreglos de números separados por comas (e.g., '1,2,3;4,5,6'):");
+            if (!input) {
+                document.getElementById("resultadoPromedios").innerHTML = "Por favor, introduce una cadena válida.";
+                return;
+            }
+
+            let filas = input.split(';');
+            let matriz = filas.map(fila => fila.split(',').map(Number));
+            let promedios = [];
+
+            for (let i = 0; i < matriz.length; i++) {
+                let fila = matriz[i];
+                let suma = 0;
+                let totalElementos = fila.length;
+
+                for (let j = 0; j < fila.length; j++) {
+                    if (isNaN(fila[j])) {
+                        document.getElementById("resultadoPromedios").innerHTML = "Por favor, introduce solo números válidos.";
+                        return;
+                    }
+                    suma += fila[j];
+                }
+
+                let promedio = suma / totalElementos;
+                promedios.push(promedio);
+            }
+
+            document.getElementById("resultadoPromedios").innerHTML = `Promedios: ${promedios.join(', ')}`;
+        }
+    </script>
+
+    <!-- Caso 5 -->
+    <div>
+        <h1>Caso 5 - Inverso de un Número</h1>
+        <button onclick="calcularInverso()">Calcular Inverso</button>
+        <div id="resultadoInverso"></div>
+    </div>
+
+    <script>
+        function calcularInverso() {
+            let numero = parseInt(prompt("Introduce un número:"));
+            if (isNaN(numero)) {
+                document.getElementById("resultadoInverso").innerHTML = "Por favor, introduce un número válido.";
+                return;
+            }
+
+            // Convertimos el número en una cadena, lo invertimos y lo devolvemos como número
+            let numeroInvertido = parseInt(numero.toString().split('').reverse().join(''));
+
+            document.getElementById("resultadoInverso").innerHTML = `El inverso de ${numero} es ${numeroInvertido}`;
+        }
+    </script>
+
+    <!-- Caso 6 -->
+<div>
+    <h1>Caso 6 - Incremento de Paga</h1>
+    <button onclick="calcularPaga()">Calcular Paga Total</button>
+    <div id="resultadoPaga"></div>
+
+    <script>
+        function calcularPaga() {
+            let pagaInicial = parseFloat(prompt("Introduce tu paga inicial:"));
+            let periodos = parseInt(prompt("Introduce el número de periodos:"));
+            
+            if (isNaN(pagaInicial) || pagaInicial <= 0) {
+                document.getElementById("resultadoPaga").innerHTML = "Por favor, introduce una paga inicial válida.";
+                return;
+            }
+            
+            if (isNaN(periodos) || periodos <= 0) {
+                document.getElementById("resultadoPaga").innerHTML = "Por favor, introduce un número de periodos válido.";
+                return;
+            }
+
+            let totalPaga = 0;
+            for (let i = 1; i <= periodos; i++) {
+                let incremento = Math.pow(pagaInicial, i);
+                totalPaga += incremento;
+            }
+
+            document.getElementById("resultadoPaga").innerHTML = `Tu paga total después de ${periodos} periodos es ${totalPaga}.`;
+        }
+    </script>
+</div>+
+</body>
+</html>

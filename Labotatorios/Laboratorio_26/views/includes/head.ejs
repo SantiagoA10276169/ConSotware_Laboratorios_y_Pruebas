@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="has-text-centered">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fire Emblem</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://fire-emblem-heroes.com">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Fire_Emblem_Heroes_logo.png" alt="Fire Emblem Heroes Logo">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">Inicio</a>
+            <a class="navbar-item" href="/info">About</a>
+            <a class="navbar-item" href="/hero">Hero of the Day</a>
+            <a class="navbar-item" href="/brave">Brave Heroes</a>
+            <a class="navbar-item" href="/brave">Book VIII</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Past Banners</a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">Book I</a>
+                    <a class="navbar-item is-selected">Book II</a>
+                    <a class="navbar-item">Book III</a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <% if (typeof username !== 'undefined' && username !== '') { %>
+                        <img
+
+                        class="image is-64x64 is-rounded"
+
+                        src="https://cdn.fireemblemwiki.org/thumb/9/9a/Portrait_kiran_hero_summoner_01_feh.png/100px-Portrait_kiran_hero_summoner_01_feh.png" 
+
+                        alt="Sumonner Ph"
+
+                    >
+                        Bienvenido(a) <%= username %>
+                        <a href="/logout" class="button is-danger">Salir</a>
+                    <% } else { %> 
+                        
+                        <a class="button is-primary"><strong>Registrarse</strong></a>
+                        <a href="/login" class="button is-primary"><strong>Entrar</strong></a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="section">
+    <div class="container">
+    </div>
+</section>
+</body>

@@ -1,0 +1,68 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Hero Details</h1>
+            
+            <div class="columns is-multiline">
+                <!-- Hero Info -->
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">Hero</p>
+                            <p class="subtitle"><%= heroName %> (<%= epithet %>)</p>
+                        </div>
+                        <div class="card-image">
+                            <% if (resplendentExists) { %>
+                                <figure class="image is-4by3">
+                                    <img src="<%= resplendentImageUrl %>" alt="Resplendent Hero Image">
+                                </figure>
+                            <% } else { %>
+                                <figure class="image is-4by3">
+                                    <img src="<%= imageUrl %>" alt="Hero Image">
+                                </figure>
+                            <% } %>
+                        </div>
+                        <!-- Additional Info below the image -->
+                        <div class="card-content">
+                            <h2 class="title">Additional Info</h2>
+                            <ul>
+                                <li><strong>Movement Type:</strong> <%= movementType %></li>
+                                <li><strong>Honor Type:</strong> <%= honorType %></li>
+                                <li><strong>Origin:</strong> <%= origins %></li>
+                                <li><strong>Max Dragonflowers:</strong> <%= maxDragonflowers %></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Stats -->
+                <div class="column is-three-quarters">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="title">Stats</h2>
+                            <ul>
+                                <li><strong>HP:</strong> <%= baseStats.hp %></li>
+                                <li><strong>Attack:</strong> <%= baseStats.atk %></li>
+                                <li><strong>Defense:</strong> <%= baseStats.def %></li>
+                                <li><strong>Resistance:</strong> <%= baseStats.res %></li>
+                                <li><strong>Speed:</strong> <%= baseStats.spd %></li>
+                            </ul>
+                            <h2 class="title">Growth Rates</h2>
+                            <ul>
+                                <li><strong>HP Growth:</strong> <%= growthRates.hp %></li>
+                                <li><strong>Attack Growth:</strong> <%= growthRates.atk %></li>
+                                <li><strong>Defense Growth:</strong> <%= growthRates.def %></li>
+                                <li><strong>Resistance Growth:</strong> <%= growthRates.res %></li>
+                                <li><strong>Speed Growth:</strong> <%= growthRates.spd %></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<%- include('includes/foot.ejs') %>
+
